@@ -7,9 +7,22 @@ Format the columns to make the output look like this:
    1    99.990
    2    99.980
 """
-
+"""
 print("n", "Un")
 Un = 100                    # Un = each term of the sequence. Initially = U0
 for n in range(20):
     print(n, Un)
     Un = 1.01*Un - 1.01     # Set Un to the next term of the sequence
+"""
+
+
+
+print("n", "Un")
+Un = 100
+i = 0
+while Un >= 0:
+   print(i, Un)
+   Un = 1.01*Un - 1.01  # Set Un to the next term of the sequence
+   i += 1
+
+print("Não há mais números positivos")

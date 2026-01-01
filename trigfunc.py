@@ -2,12 +2,26 @@
 # See: https://en.wikipedia.org/wiki/Taylor_series#Trigonometric_functions
 
 import math
-
+import fatorial
 
 def sin_a(x):
-    """Return approximation to sin x."""
-    # sin x = x - x³/3! + x⁵/5! - x⁷/7! + ...
-    ...
+    #Return approximation to sin x using Taylor Series.
+    soma = 0
+    N = 25  # Número de termos da série (precisão)
+    
+    for i in range(N):
+        denominador = 2 * i + 1
+        
+        # Calcula o termo atual
+        # Nota: Usei math.factorial para garantir que funciona, 
+        # mas podes usar fatorial.fatorial se o teu ficheiro estiver correto.
+        numerador = ((-1)**i) * (x**denominador)
+        termo = numerador / fatorial.fatorial(denominador)
+        
+        # Adiciona o termo à soma total
+        soma = soma + termo
+        
+    return soma
 
 
 # Constants
@@ -31,7 +45,7 @@ def sin(x):
     elif q == 2:
         s = -sin_a(r)
     else: # q == 3
-        s = ...
+        s = sin_a(r - PI2)
     return s
 
 

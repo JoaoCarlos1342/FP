@@ -1,0 +1,13 @@
+def isPalindrome(string):
+    inversed = []
+    for char in range(string, reversed = True):
+        inversed.append(char)
+    
+    print(inversed)
+    return "".join(inversed)
+
+def main():
+    string = input("Palavra: ")
+    isPalindrome(string)
+
+main()

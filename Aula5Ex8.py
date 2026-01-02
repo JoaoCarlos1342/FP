@@ -17,7 +17,7 @@ def shortner(string):
             
     return resultado
 
-def generate_pattern(num):
+def repetidor(num):
     lista = []
     for numero in range(1, num + 1):
         for _ in range(numero):
@@ -25,7 +25,15 @@ def generate_pattern(num):
             
     return lista
 
+def maximus(lista):
+    max = 0
+    max_num = lista[0]
+    for i in range(len(lista)):
+        if lista[i] > max_num:
+            max = i
+            max_num = lista[i]
 
+    return max
 
 def main():
     string = input("Palavra: ")
@@ -40,6 +48,9 @@ def main():
     print(f"Original: {string2} -> Resultado: {shortner(string2)}")
 
     num = int(input("Número: "))
-    print(generate_pattern(num))
+    print(repetidor(num))
+
+    lista = [7,9,2,0,5,4]
+    print(maximus(lista))
 
 main()

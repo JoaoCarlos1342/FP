@@ -58,12 +58,12 @@ def notaFinal(reg):
 
 # c)
 def printPauta(lst):
-    print(f"{'Numero':>8} {'Nome':^30} {'Nota':>6}")
+    print(f"{'Numero':>8} {'Nome':^45} {'Nota':>6}")
     print("-" * 46)
     
     for reg in lst:
         # Chama a função e formata diretamente dentro do print
-        print(f"{reg[0]:>8} {reg[1]:^30} {notaFinal(reg):>6.1f}")
+        print(f"{reg[0]:>8} {reg[1]:^45} {notaFinal(reg):>6.1f}")
 
 # d)
 def main():

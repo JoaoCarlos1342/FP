@@ -8,3 +8,9 @@ def main():
         print("O primeiro argumento é:", sys.argv[1])
     else:
         print("Não passaste nenhum argumento extra.")
+main()
+""" 
+import sys
+
+print("O programa iniciou!")  # Para termos a certeza que correu
+print(sys.argv) """

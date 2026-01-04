@@ -15,4 +15,6 @@ def main():
     print(len(allMatches(["FCP", "SCP", "SLB", "SCB"])))  # 12
     print(len(allMatches(["A", "B", "C", "D", "E"])))  # 20
 
-main()
+
+if __name__ == "__main__":
+    main()

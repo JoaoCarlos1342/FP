@@ -1,16 +1,12 @@
-import sys
-
 def main():
-    print("A lista completa é:", sys.argv)
-    print("O nome do ficheiro é;", sys.argv[0])
-
-    if len(sys.argv) > 1:
-        print("O primeiro argumento é:", sys.argv[1])
-    else:
-        print("Não passaste nenhum argumento extra.")
+    contactos = {"234370200": "Universidade de Aveiro",
+        "727392822": "Cristiano Aveiro",
+        "387719992": "Maria Matos",
+        "887555987": "Marta Maia",
+        "876111333": "Carlos Martins",
+        "433162999": "Ana Bacalhau"
+        }
+    num = "23437020"
+    print(contactos.get(num))
+    print(contactos.items()[1])
 main()
-""" 
-import sys
-
-print("O programa iniciou!")  # Para termos a certeza que correu
-print(sys.argv) """

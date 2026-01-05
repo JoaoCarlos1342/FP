@@ -1,10 +1,5 @@
-import sys
+    partes = nome_limpo.split()
 
-def main():
-    print("A lista completa é:", sys.argv)
-    print("O nome do ficheiro é;", sys.argv[0])
-
-    if len(sys.argv) > 1:
-        print("O primeiro argumento é:", sys.argv[1])
-    else:
-        print("Não passaste nenhum argumento extra.")
+                if len(partes) >= 1:
+                    primeiro_nome = partes[0]
+                    ultimo_nome = partes[-1]

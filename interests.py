@@ -20,7 +20,7 @@ def main():
 
 
     print("a) Table of common interests:")
-    commoninterests = ...
+    commoninterests = set.intersection(*interests.values())
     print(commoninterests)
 
     print("b) Maximum number of common interests:")
@@ -38,4 +38,3 @@ def main():
 
 # Start program:
 main()
-

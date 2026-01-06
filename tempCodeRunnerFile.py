@@ -1,5 +1,3 @@
-    partes = nome_limpo.split()
-
-                if len(partes) >= 1:
-                    primeiro_nome = partes[0]
-                    ultimo_nome = partes[-1]
+# Testing:
+    s = primesUpTo(1000)
+    print(s)

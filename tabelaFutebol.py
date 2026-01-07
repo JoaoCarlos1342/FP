@@ -44,35 +44,42 @@ numJogos = lambda reg: reg[V]+reg[E]+reg[D]
 # Complete a expressão lambda para definir uma função que,
 # dado um registo de uma equipa, devolva o número de pontos da equipa.
 # (Cada vitória vale 3 pontos, cada empate vale 1 ponto.)
-pontos = lambda reg: ...
+pontos = lambda reg: (reg[V] * 3) + reg[E]
 
 def main():
     # Teste:
+    print("Número de jogos")
     print(tabela[3][N], numJogos(tabela[3]))  # Feirense 10?
-
+    print("")
+    print("Número de pontos")
     print(tabela[-1][N], pontos(tabela[-1]))  # Chaves 7?
-
+    print("")
 
     # Mostra a tabela classificativa original, não ordenada:
+    print("Tabela de equipas")
     printTabela(tabela)
+    print("")
 
     # b)
     # Acrescente os argumentos adequados à função sorted para
     # obter uma tabela ordenada por ordem decrescente de pontos:
-    tab = sorted(tabela  )
+    print("Tabela de equipas ordenada por número de pontos decresecente")
+    tab = sorted(tabela, key=pontos, reverse=True)
     printTabela(tab)
+    print("")
 
     # c)
     # Acrescente os argumentos adequados à função sorted para
-    # obter uma tabela ordenada por ordem decrescente da diferença GM-GS:
-    tab = sorted(tabela  )
+    # obter uma tabela ordenada por ordem decrescente da diferença GM-GS:~
+    print("Tabela ordenada por ordem decrescente da diferença GM-GS")
+    tab = sorted(tabela, key=lambda reg:reg[4]-reg[5], reverse=True)
     printTabela(tab)
 
     # d)
     # Acrescente os argumentos adequados à função sorted para
     # obter uma tabela ordenada por ordem decrescente de pontos e,
     # se iguais, por ordem da diferença GM-GS:
-    tab = sorted(tabela  )
+    tab = sorted(tabela, key=lambda reg: (pontos, reg[4]-reg[5]), reverse=True)
     printTabela(tab)
 
 if __name__ == "__main__":

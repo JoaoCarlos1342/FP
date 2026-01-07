@@ -33,7 +33,7 @@ def findSurname(names, surname):
     idx1 = bisect.bisect_left(names, surname)  # YOU MUST FIX THIS!
 
     # Find the index after the last name with given surname
-    idx2 = bisect.bisect_right(names, ...)  # COMPLETE THIS!
+    idx2 = bisect.bisect_right(names, surname + chr(255))  # COMPLETE THIS!
     
     # Show searched surname and limits found
     print(f"Searching {surname!r} --> [{idx1}:{idx2}]")

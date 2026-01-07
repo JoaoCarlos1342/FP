@@ -21,13 +21,13 @@ def main():
     table(lst1)
 
     # Sort lst1 by order of decreasing GRADE
-    lst2 = sorted(lst1, ...)
+    lst2 = sorted(lst1, key=lambda lst1:lst1[1], reverse=True)
 
     print("lst2")
     table(lst2)
 
     # Sort lst2 by order of increasing GROUP
-    lst3 = sorted(lst2, ...)
+    lst3 = sorted(lst2, key=lambda lst1:lst1[3])
     
     print("lst3")
     table(lst3)

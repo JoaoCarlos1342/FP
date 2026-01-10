@@ -25,12 +25,12 @@ def removeTeam(equipas):
         print("Essa equipa não existe")
 
 def printTable(tabela):
-    print("\n {:^15s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s}".formar("Equipa", "V", "E", "D", "GM", "Pts"))
+    print("\n {:^15s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s}".format("Equipa", "V", "E", "D", "GM", "Pts"))
     print("-" * 60)
     
     for equipa, dados in tabela.items():
         v, e, d, gm, gs, pts = dados
-        print("\n {:^15s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s}".formar(equipa, v, e, d, gm, pts))
+        print("\n {:^15s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s} | {:^3s}".format(equipa, v, e, d, gm, pts))
         print("-" * 60)
 
 def findChampion(tabela):
@@ -77,20 +77,20 @@ def runChampionship(equipas, jogos):
         tabela[fora][3] += g_fora
         tabela[fora][4] += g_casa
 
-    if g_casa > g_fora:
-        tabela[casa][0] += 1
-        tabela[casa][5] += 3
-        tabela[fora][2] += 1
-    elif g_fora > g_casa:
-        tabela[fora][0] += 1
-        tabela[fora][5] += 3
-        tabela[casa][2] += 1
-    else:
-        tabela[casa][1] += 1
-        tabela[casa][5] += 1
-        tabela[fora][1] += 1
-        tabela[fora][5] += 1
-    
+        if g_casa > g_fora:
+            tabela[casa][0] += 1
+            tabela[casa][5] += 3
+            tabela[fora][2] += 1
+        elif g_fora > g_casa:
+            tabela[fora][0] += 1
+            tabela[fora][5] += 3
+            tabela[casa][2] += 1
+        else:
+            tabela[casa][1] += 1
+            tabela[casa][5] += 1
+            tabela[fora][1] += 1
+            tabela[fora][5] += 1
+        
     printTable(tabela)
 
     campeao, pontos = findChampion(tabela)
